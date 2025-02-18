@@ -19,9 +19,9 @@ public class Tools {
     // 展示并选择难度
     public int showAndSelectDifficulty(){
         System.out.println("可选择的游戏难度如下：");
-        System.out.println("1. 简单(10次机会)");
-        System.out.println("2. 中等(5次机会)");
-        System.out.println("3. 困难(3次机会)");
+        System.out.println("1. 简单Easy(10次机会)");
+        System.out.println("2. 中等Medium(5次机会)");
+        System.out.println("3. 困难Hard(3次机会)");
         Scanner sc = new Scanner(System.in);
         int selectedDifficulty = 0;
         while (true){
@@ -31,12 +31,12 @@ public class Tools {
                 if (selectedDifficulty == 1 || selectedDifficulty == 2 || selectedDifficulty == 3) {
                     break;
                 }else {
-                    System.out.println("输入有误，请重新输入！");
-                    selectedDifficulty = 0;
-                    continue;
+                    System.out.println("输入有误，请重新输入！"); // 数字不在1-3之间
+                    System.out.println();
                 }
             }else{
-                System.out.println("输入有误，请重新输入！");
+                System.out.println("输入有误，请重新输入！"); // 输入不是数字
+                System.out.println();
                 sc.next();
             }
         }
@@ -44,8 +44,8 @@ public class Tools {
     }
 
     // 已选择的难度
-    public void selectedDifficulty(Enum difficulty,int times) {
-        System.out.println("你选择了" + difficulty + "难度，你有" + times + "次机会猜数字。");
+    public void selectedDifficultyAndTimes(Difficulty difficulty,int times) {
+        System.out.println("你选择了" + difficulty.getValue() + "难度，你有" + times + "次机会猜数字。");
     }
 
 

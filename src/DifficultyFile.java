@@ -61,7 +61,6 @@ public class DifficultyFile {
         // 将数字转换为对应的难度，然后转成枚举类型
         String difficultyStr = map.get(difficultyInt).toUpperCase();
         Difficulty difficultyEnum = Difficulty.valueOf(difficultyStr);
-        System.out.println("当前选择的难度是：" + difficultyEnum.getValue());
         return difficultyEnum;
     }
 
