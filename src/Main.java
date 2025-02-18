@@ -45,5 +45,7 @@ public class Main {
         tools.selectedDifficultyAndTimes(difficulty, guessTimes);
         // 开始猜测
         gameTools.start(guessTimes);
+
+
     }
 }

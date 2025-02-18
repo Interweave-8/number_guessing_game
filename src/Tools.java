@@ -47,7 +47,4 @@ public class Tools {
     public void selectedDifficultyAndTimes(Difficulty difficulty,int times) {
         System.out.println("你选择了" + difficulty.getValue() + "难度，你有" + times + "次机会猜数字。");
     }
-
-
-
 }
